@@ -1,0 +1,151 @@
+/* Grid */
+.agent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+/* Card */
+.agent-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* Agent header strips */
+.agent-header {
+    display: flex;
+    align-items: center;
+    padding: 0.65rem 0.875rem;
+    gap: 0.5rem;
+}
+.agent-header--medical    { background: #eff6ff; border-bottom: 2px solid #3b82f6; }
+.agent-header--legal      { background: #f0fdf4; border-bottom: 2px solid #22c55e; }
+.agent-header--regulatory { background: #fdf4ff; border-bottom: 2px solid #a855f7; }
+
+.agent-type-label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex: 1;
+    color: #1f2937;
+}
+
+/* Confidence pills */
+.confidence-pill {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.confidence-pill--high   { background: #dcfce7; color: #15803d; }
+.confidence-pill--medium { background: #fef3c7; color: #92400e; }
+.confidence-pill--low    { background: #fee2e2; color: #991b1b; }
+
+/* Status */
+.agent-status {
+    padding: 0.35rem 0.875rem;
+    background: #f9fafb;
+    border-bottom: 1px solid #f3f4f6;
+}
+.status-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+}
+.status-badge--complete  { background: #d1fae5; color: #065f46; }
+.status-badge--running   { background: #dbeafe; color: #1e40af; }
+.status-badge--pending   { background: #f3f4f6; color: #6b7280; }
+.status-badge--failed    { background: #fee2e2; color: #991b1b; }
+
+/* Sections */
+.agent-section {
+    padding: 0.75rem 0.875rem 0;
+    flex: 1;
+}
+.section-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.25rem;
+}
+.section-body {
+    font-size: 0.8rem;
+    color: #374151;
+    line-height: 1.55;
+}
+
+/* Flags */
+.flags-block {
+    margin: 0.75rem 0.875rem 0;
+    padding: 0.5rem 0.625rem;
+    background: #fffbeb;
+    border-left: 3px solid #fbbf24;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Footer */
+.agent-footer {
+    margin-top: auto;
+    padding: 0.75rem 0.875rem 0.5rem;
+    border-top: 1px solid #f3f4f6;
+}
+.grounding-bar-container {
+    height: 4px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    margin-bottom: 0.4rem;
+    overflow: hidden;
+}
+.grounding-bar {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.4s ease;
+}
+.footer-meta {
+    font-size: 0.72rem;
+    color: #9ca3af;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.cited-source {
+    font-style: italic;
+    font-size: 0.68rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* No results */
+.no-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #6b7280;
+}
+.no-results-icon { opacity: 0.35; }
+
+/* Loading */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .agent-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,33 @@
+<template>
+    <div class="upload-container">
+        <div class="upload-header">
+            <lightning-icon icon-name="utility:attach" size="small" class="slds-m-right_x-small"></lightning-icon>
+            <span class="upload-title">Upload Asset Document</span>
+            <span class="upload-optional">(Optional)</span>
+        </div>
+        <p class="upload-hint">Attach the source PDF, Word document, or presentation for reference by the review team.</p>
+
+        <lightning-file-upload
+            label="Choose Files"
+            name="assetUploader"
+            accept={acceptedFormats}
+            record-id={recordId}
+            onuploadfinished={handleUploadFinished}
+            multiple>
+        </lightning-file-upload>
+
+        <template if:true={hasFiles}>
+            <div class="uploaded-list slds-m-top_small">
+                <p class="uploaded-label">Uploaded ({uploadCount}):</p>
+                <ul class="file-list">
+                    <template for:each={uploadedFiles} for:item="file">
+                        <li key={file.documentId} class="file-item">
+                            <lightning-icon icon-name="doctype:attachment" size="xx-small" class="slds-m-right_xx-small"></lightning-icon>
+                            <span>{file.name}</span>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </template>
+    </div>
+</template>

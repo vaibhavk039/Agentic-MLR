@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>MLR_Dashboard</defaultLandingTab>
+    <description>MLR Pre-Screening Platform — AI-powered Medical, Legal and Regulatory review</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>true</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>MLR Pre-Screener</label>
+    <navType>Standard</navType>
+    <tabs>MLR_Dashboard</tabs>
+    <tabs>MLR_Submission__c</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

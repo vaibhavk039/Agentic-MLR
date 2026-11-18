@@ -1,0 +1,99 @@
+================================================================================
+CARDIO-SHIELD™ (sacubitril/valsartan) 24mg/26mg, 49mg/51mg, 97mg/103mg
+Detail Aid — HCP Promotional Material — DRAFT
+Submitted for MLR Pre-Screening Review
+================================================================================
+
+INDICATION
+CARDIO-SHIELD is indicated to reduce the risk of cardiovascular death and
+hospitalization for heart failure in adult patients with chronic heart failure
+(NYHA Class II-IV) and reduced ejection fraction (HFrEF). CARDIO-SHIELD is
+usually administered in conjunction with other heart failure therapies, in place
+of an ACE inhibitor or other ARB.
+
+--------------------------------------------------------------------------------
+MECHANISM OF ACTION
+--------------------------------------------------------------------------------
+
+CARDIO-SHIELD contains sacubitril (neprilysin inhibitor) and valsartan
+(angiotensin II receptor blocker):
+
+  • Sacubitril is metabolized to LBQ657, which inhibits neprilysin
+  • Neprilysin inhibition increases natriuretic peptide levels (ANP, BNP)
+  • Results in vasodilation, natriuresis, and reduced cardiac remodeling
+  • Valsartan blocks angiotensin II type 1 (AT1) receptors
+  • Combined: reduces cardiac workload via dual neurohormonal pathway inhibition
+
+--------------------------------------------------------------------------------
+LANDMARK CLINICAL EVIDENCE: PARADIGM-HF
+--------------------------------------------------------------------------------
+
+Primary Endpoint: Composite of CV death or first heart failure hospitalization
+  • CARDIO-SHIELD: 21.8%  |  Enalapril: 26.5%
+  • Relative Risk Reduction: 20%  |  HR 0.80 (95% CI 0.73–0.87), p<0.001
+  • Absolute Risk Reduction: 4.7%  |  NNT: 21 over median 27 months
+
+Cardiovascular Death:
+  • 13.3% vs 16.5%  |  HR 0.80, p<0.001
+
+Heart Failure Hospitalization:
+  • 12.8% vs 15.6%  |  HR 0.79, p<0.001
+
+All-Cause Mortality:
+  • 17.0% vs 19.8%  |  HR 0.84 (95% CI 0.76–0.93), p<0.001
+
+PARADIGM-HF enrolled 8,442 patients with HFrEF (EF ≤ 40%) on stable ACE
+inhibitor or ARB therapy.
+
+--------------------------------------------------------------------------------
+SAFETY — MOST COMMON ADVERSE REACTIONS (>5%)
+--------------------------------------------------------------------------------
+
+  Hypotension             18%
+  Hyperkalemia            12%
+  Renal Impairment        10%
+  Cough                    9%
+  Dizziness                7%
+
+WARNINGS AND PRECAUTIONS:
+  ■ BOXED WARNING: Fetal Toxicity — Discontinue when pregnancy is detected
+  ■ Hypotension — particularly in patients with low sodium or high-dose diuretics
+  ■ Impaired renal function — monitor serum creatinine and potassium
+  ■ Hyperkalemia — monitor and dose adjust potassium-sparing agents
+  ■ Angioedema — contraindicated in patients with history of ACE-inhibitor
+    angioedema; wait 36 hours after stopping ACE inhibitor before starting
+
+CONTRAINDICATIONS:
+  • Concomitant use with ACE inhibitors (within 36 hours)
+  • History of angioedema with prior ACE inhibitor/ARB therapy
+  • Coadministration with aliskiren in patients with diabetes
+
+--------------------------------------------------------------------------------
+DOSING
+--------------------------------------------------------------------------------
+
+  Starting dose: 49/51 mg twice daily (may start at 24/26 mg if ACE-inhibitor
+  naïve or eGFR <30 mL/min/1.73m² or moderate hepatic impairment)
+  Target dose: 97/103 mg twice daily (double dose every 2–4 weeks as tolerated)
+
+--------------------------------------------------------------------------------
+REGULATORY STATUS
+--------------------------------------------------------------------------------
+
+  FDA Approval: July 7, 2015 (sNDA: NDA 207620)
+  EMA Approval: November 19, 2015
+  DEA Schedule: Not a controlled substance
+
+================================================================================
+REFERENCES
+
+1. McMurray JJV et al. Angiotensin–neprilysin inhibition versus enalapril in
+   heart failure. N Engl J Med. 2014;371:993-1004. (PARADIGM-HF)
+2. CARDIO-SHIELD Prescribing Information. PharmaCorp USA LLC. 2024.
+3. 2022 AHA/ACC/HFSA Guideline for Management of Heart Failure. JACC.
+   2022;79(17):e263-e421.
+================================================================================
+FOR HEALTHCARE PROFESSIONAL USE ONLY
+© 2024 PharmaCorp USA LLC. All rights reserved.
+Draft material — not approved for distribution.
+================================================================================

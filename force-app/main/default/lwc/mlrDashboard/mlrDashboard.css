@@ -1,0 +1,125 @@
+.mlr-app {
+    background: #f3f3f3;
+    min-height: 100%;
+    padding-bottom: 24px;
+}
+
+.mlr-header {
+    background: linear-gradient(135deg, #032d60 0%, #0070d2 100%);
+    padding: 24px 32px;
+    margin-bottom: 0;
+}
+
+.mlr-header-inner {
+    display: flex;
+    align-items: center;
+}
+
+.mlr-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 4px 0;
+}
+
+.mlr-subtitle {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px 16px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border-top: 4px solid #ccc;
+}
+
+.stat-total { border-top-color: #0070d2; }
+.stat-review { border-top-color: #ff9a3c; }
+.stat-prescreened { border-top-color: #9b59b6; }
+.stat-approved { border-top-color: #27ae60; }
+.stat-rejected { border-top-color: #e74c3c; }
+.stat-revisions { border-top-color: #e67e22; }
+
+.stat-num {
+    font-size: 36px;
+    font-weight: 700;
+    color: #032d60;
+    margin: 0 0 4px 0;
+    line-height: 1;
+}
+
+.stat-lbl {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.confidence-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.conf-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.conf-high { background: #d4edda; color: #155724; }
+.conf-medium { background: #fff3cd; color: #856404; }
+.conf-low { background: #f8d7da; color: #721c24; }
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.mlr-table {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.demo-guide {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border-left: 4px solid #0070d2;
+}
+
+.demo-steps {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.demo-steps li {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}

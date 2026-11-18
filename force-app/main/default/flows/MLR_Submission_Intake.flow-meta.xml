@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>67.0</apiVersion>
+    <choices>
+        <name>AssetType_Brochure</name>
+        <choiceText>Brochure</choiceText>
+        <dataType>String</dataType>
+        <value><stringValue>Brochure</stringValue></value>
+    </choices>
+    <choices>
+        <name>AssetType_DetailAid</name>
+        <choiceText>Detail Aid</choiceText>
+        <dataType>String</dataType>
+        <value><stringValue>Detail Aid</stringValue></value>
+    </choices>
+    <choices>
+        <name>AssetType_RepDeck</name>
+        <choiceText>Rep Deck / Slide Set</choiceText>
+        <dataType>String</dataType>
+        <value><stringValue>Rep Deck</stringValue></value>
+    </choices>
+    <choices>
+        <name>AssetType_Email</name>
+        <choiceText>Email / eMessage</choiceText>
+        <dataType>String</dataType>
+        <value><stringValue>Email</stringValue></value>
+    </choices>
+    <choices>
+        <name>AssetType_Social</name>
+        <choiceText>Digital / Social Media</choiceText>
+        <dataType>String</dataType>
+        <value><stringValue>Digital / Social Media</stringValue></value>
+    </choices>
+    <choices>
+        <name>AssetType_PatientLeave</name>
+        <choiceText>Patient Leave-Behind</choiceText>
+        <dataType>String</dataType>
+        <value><stringValue>Patient Leave-Behind</stringValue></value>
+    </choices>
+    <choices>
+        <name>AssetType_Other</name>
+        <choiceText>Other</choiceText>
+        <dataType>String</dataType>
+        <value><stringValue>Other</stringValue></value>
+    </choices>
+    <label>MLR Submission Intake</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Submission_Record</name>
+        <label>Create Submission Record</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <assignRecordIdToReference>SubmissionId</assignRecordIdToReference>
+        <connector>
+            <targetReference>Upload_Document</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Asset_Type__c</field>
+            <value><elementReference>Asset_Type</elementReference></value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Program__c</field>
+            <value><elementReference>Program</elementReference></value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value><stringValue>Draft</stringValue></value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Submitted_By__c</field>
+            <value><elementReference>$User.Id</elementReference></value>
+        </inputAssignments>
+        <object>MLR_Submission__c</object>
+    </recordCreates>
+    <screens>
+        <name>Step1_Details</name>
+        <label>Submit Asset for Review</label>
+        <locationX>176</locationX>
+        <locationY>38</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Create_Submission_Record</targetReference>
+        </connector>
+        <fields>
+            <name>IntroText</name>
+            <fieldText>&lt;p&gt;Select the asset type and upload the promotional document. The AI agents will read the file and perform Medical, Legal, and Regulatory pre-screening automatically.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Asset_Type</name>
+            <choiceReferences>AssetType_Brochure</choiceReferences>
+            <choiceReferences>AssetType_DetailAid</choiceReferences>
+            <choiceReferences>AssetType_RepDeck</choiceReferences>
+            <choiceReferences>AssetType_Email</choiceReferences>
+            <choiceReferences>AssetType_Social</choiceReferences>
+            <choiceReferences>AssetType_PatientLeave</choiceReferences>
+            <choiceReferences>AssetType_Other</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Asset Type</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Program</name>
+            <dataType>String</dataType>
+            <fieldText>Brand / Program Name (optional)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Upload_Document</name>
+        <label>Upload Document</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Confirmation_Screen</targetReference>
+        </connector>
+        <fields>
+            <name>UploadIntroText</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Upload the document for AI review (required).&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Accepted: PDF, Word (.doc/.docx), PowerPoint, TXT. The Medical, Legal, and Regulatory agents will analyze the uploaded file automatically.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>DocUpload</name>
+            <extensionName>c:mlrFileUpload</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>recordId</name>
+                <value><elementReference>SubmissionId</elementReference></value>
+            </inputParameters>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Confirmation_Screen</name>
+        <label>Confirmation</label>
+        <locationX>176</locationX>
+        <locationY>398</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Confirmation_Text</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Submission received.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;The AI agents are now pre-screening your document. Check back in 30–60 seconds to see the Medical, Legal, and Regulatory results.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Step1_Details</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>SubmissionId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

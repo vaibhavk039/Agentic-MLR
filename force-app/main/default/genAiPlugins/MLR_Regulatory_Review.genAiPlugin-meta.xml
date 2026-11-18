@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>MLR_Regulatory_Review</developerName>
+    <masterLabel>MLR Regulatory Review</masterLabel>
+    <description>Handles requests to assess the regulatory compliance of MLR submission documents.</description>
+    <language>en_US</language>
+    <pluginType>Topic</pluginType>
+    <scope>Handle requests to pre-screen an MLR submission for regulatory compliance, including FDA 21 CFR Part 202 advertising requirements, fair balance obligations, brief summary requirements, and off-label promotion rules enforced by the FDA Office of Prescription Drug Promotion. Use this topic when the user asks about regulatory review, FDA compliance, off-label promotion, or wants to run a regulatory pre-screen on a submission. Do not handle medical accuracy or legal compliance questions — those are separate topics.</scope>
+    <genAiFunctions>
+        <functionName>Run_MLR_PreScreen</functionName>
+    </genAiFunctions>
+</GenAiPlugin>

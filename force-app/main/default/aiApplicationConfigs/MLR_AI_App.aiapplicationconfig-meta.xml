@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AIApplicationConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>MLR_AI_App</developerName>
+    <masterLabel>MLR AI Application Config</masterLabel>
+    <aiApplicationDeveloperName>MLR_AI_App</aiApplicationDeveloperName>
+</AIApplicationConfig>

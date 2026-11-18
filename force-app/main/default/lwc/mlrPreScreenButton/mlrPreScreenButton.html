@@ -1,0 +1,85 @@
+<template>
+    <lightning-card title="MLR Pre-Screener" icon-name="standard:einstein">
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <!-- Upload -->
+            <div class="slds-box slds-box_x-small slds-m-bottom_medium slds-theme_shade">
+                <p class="slds-text-body_small slds-text-color_weak slds-m-bottom_x-small">
+                    Upload a document, then click Run Pre-Screener. Re-upload to scan a revised version.
+                </p>
+                <lightning-file-upload
+                    label="Upload Document"
+                    name="mlrFileUpload"
+                    accept=".pdf,.doc,.docx,.txt,.pptx"
+                    record-id={recordId}
+                    onuploadfinished={handleUploadFinished}
+                    disabled={isRunning}>
+                </lightning-file-upload>
+            </div>
+
+            <!-- File ready prompt -->
+            <template lwc:if={fileReady}>
+                <div class="slds-notify slds-notify_alert slds-theme_success slds-m-bottom_small" role="alert">
+                    <span>&#10004; <strong>{uploadedFileName}</strong> uploaded &mdash; click <strong>Run Pre-Screener</strong> below to start the scan.</span>
+                </div>
+            </template>
+
+            <!-- Run button -->
+            <div class="slds-m-bottom_medium">
+                <lightning-button
+                    variant="brand"
+                    label="Run Pre-Screener"
+                    icon-name="utility:apex"
+                    disabled={isRunning}
+                    onclick={handleRunPreScreen}>
+                </lightning-button>
+            </div>
+
+            <!-- Running -->
+            <template lwc:if={isRunning}>
+                <div class="slds-align_absolute-center slds-m-bottom_medium">
+                    <lightning-spinner alternative-text="Running agents..." size="small"></lightning-spinner>
+                    <span class="slds-m-left_small slds-text-color_weak">{runningMessage}</span>
+                </div>
+            </template>
+
+            <!-- Status message -->
+            <template lwc:if={statusMessage}>
+                <div class="slds-notify slds-notify_alert slds-theme_info slds-m-bottom_small" role="alert">
+                    <span>{statusMessage}</span>
+                </div>
+            </template>
+
+            <!-- Results -->
+            <template lwc:if={hasResults}>
+                <h3 class="slds-text-heading_small slds-m-bottom_small">Review Results</h3>
+                <template for:each={results} for:item="result">
+                    <div key={result.Id} class="slds-box slds-m-bottom_small">
+                        <div class="slds-grid slds-gutters slds-m-bottom_xx-small">
+                            <div class="slds-col">
+                                <span class="slds-text-heading_small">{result.Agent_Type__c} Review</span>
+                            </div>
+                            <div class="slds-col slds-shrink">
+                                <lightning-badge label={result.Processing_Status__c}></lightning-badge>
+                                &nbsp;
+                                <lightning-badge label={result.Confidence__c}></lightning-badge>
+                            </div>
+                        </div>
+                        <template lwc:if={result.Flags__c}>
+                            <p class="slds-text-body_small"><strong>Flags:</strong> {result.Flags__c}</p>
+                        </template>
+                        <template lwc:if={result.Rationale__c}>
+                            <p class="slds-text-body_small slds-m-top_xx-small"><strong>Rationale:</strong> {result.Rationale__c}</p>
+                        </template>
+                    </div>
+                </template>
+            </template>
+
+            <!-- No results -->
+            <template lwc:if={noResults}>
+                <p class="slds-text-color_weak">No results yet. Upload a document above then click Run Pre-Screener.</p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>MLR_Medical_Review</members>
+        <members>MLR_Legal_Review</members>
+        <members>MLR_Regulatory_Review</members>
+        <name>GenAiPlugin</name>
+    </types>
+    <types>
+        <members>Run_MLR_PreScreen</members>
+        <name>GenAiFunction</name>
+    </types>
+    <version>67.0</version>
+</Package>

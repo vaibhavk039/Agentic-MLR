@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>Run_MLR_PreScreen</developerName>
+    <masterLabel>Run MLR Pre-Screen</masterLabel>
+    <description>Call this action to pre-screen an MLR submission document. Pass the Salesforce record ID of the MLR_Submission__c record. Triggers sequential Medical, Legal, and Regulatory review agents.</description>
+    <language>en_US</language>
+    <invocationTargetType>apex</invocationTargetType>
+    <invocationTarget>MLROrchestrationService</invocationTarget>
+</GenAiFunction>

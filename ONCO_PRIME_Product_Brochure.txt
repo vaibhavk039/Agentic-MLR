@@ -1,0 +1,87 @@
+================================================================================
+ONCO-PRIME™ Targeted Oncology Therapy
+Promotional Brochure — Draft for MLR Pre-Screening
+================================================================================
+
+INDICATION
+ONCO-PRIME (bevacizumab-alfa) is indicated for the treatment of adult patients
+with metastatic non-small cell lung cancer (mNSCLC) whose tumors do not have
+EGFR or ALK genomic tumor aberrations, as detected by an FDA-approved test,
+as first-line therapy in combination with carboplatin and paclitaxel.
+
+--------------------------------------------------------------------------------
+CLINICAL EFFICACY
+--------------------------------------------------------------------------------
+
+STELLAR-2 Phase III Trial Results
+
+Overall Survival (OS):
+  • Median OS: 18.2 months (ONCO-PRIME arm) vs 14.6 months (placebo arm)
+  • Hazard Ratio (HR): 0.72 (95% CI: 0.61–0.85)
+  • p-value < 0.001
+
+Progression-Free Survival (PFS):
+  • Median PFS: 7.8 months vs 5.2 months
+  • HR: 0.65 (95% CI: 0.54–0.78)
+
+Overall Response Rate (ORR):
+  • 38% in ONCO-PRIME arm vs 19% in placebo arm (p < 0.001)
+
+Study Design:
+  N=820 patients randomized 1:1 to ONCO-PRIME 15 mg/kg IV Q3W +
+  carboplatin/paclitaxel vs placebo + carboplatin/paclitaxel.
+
+--------------------------------------------------------------------------------
+SAFETY PROFILE
+--------------------------------------------------------------------------------
+
+Most Common Adverse Reactions (≥ 10%):
+  • Hypertension (34%)
+  • Fatigue (28%)
+  • Epistaxis (22%)
+  • Proteinuria (18%)
+  • Headache (16%)
+  • Nausea (15%)
+  • Decreased appetite (12%)
+
+BOXED WARNINGS:
+  ■ Gastrointestinal Perforations and Fistulae
+  ■ Surgery and Wound Healing Complications
+  ■ Hemorrhage
+
+Contraindications:
+  Do not administer to patients with uncontrolled hypertension, active bleeding,
+  or recent arterial thromboembolic events.
+
+--------------------------------------------------------------------------------
+DOSING AND ADMINISTRATION
+--------------------------------------------------------------------------------
+
+  Recommended dose: 15 mg/kg IV infusion over 90 minutes (first infusion)
+  Subsequent infusions may be administered over 60 minutes if first is tolerated
+  Administered every 3 weeks until disease progression or unacceptable toxicity
+
+--------------------------------------------------------------------------------
+REGULATORY STATUS
+--------------------------------------------------------------------------------
+
+  FDA Approval Date: March 14, 2023
+  NDA Number: 761XXX
+  Manufacturer: PharmaCorp Biologics Inc.
+  NDC: 12345-6789-01
+
+--------------------------------------------------------------------------------
+REFERENCES
+--------------------------------------------------------------------------------
+
+1. Johnson et al. STELLAR-2: Phase III trial of ONCO-PRIME in mNSCLC.
+   N Engl J Med. 2023;388:1234-1245.
+2. ONCO-PRIME Prescribing Information. PharmaCorp Biologics Inc. 2023.
+3. NCCN Clinical Practice Guidelines in Oncology: Non-Small Cell Lung Cancer.
+   Version 3.2024.
+
+================================================================================
+FOR HEALTHCARE PROFESSIONALS ONLY
+Not for Patient Distribution
+© 2024 PharmaCorp Biologics Inc. All rights reserved.
+================================================================================

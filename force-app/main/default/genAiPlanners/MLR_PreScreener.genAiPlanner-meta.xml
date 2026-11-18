@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlanner xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>MLR_PreScreener</developerName>
+    <masterLabel>MLR Pre-Screener</masterLabel>
+    <description>Orchestrates MLR pre-screening requests across Medical, Legal, and Regulatory review topics.</description>
+    <genAiPlannerPlugins>
+        <pluginName>MLR_Medical_Review</pluginName>
+    </genAiPlannerPlugins>
+    <genAiPlannerPlugins>
+        <pluginName>MLR_Legal_Review</pluginName>
+    </genAiPlannerPlugins>
+    <genAiPlannerPlugins>
+        <pluginName>MLR_Regulatory_Review</pluginName>
+    </genAiPlannerPlugins>
+</GenAiPlanner>

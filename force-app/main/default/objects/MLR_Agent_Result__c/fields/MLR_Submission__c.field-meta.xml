@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MLR_Submission__c</fullName>
+    <label>MLR Submission</label>
+    <referenceTo>MLR_Submission__c</referenceTo>
+    <relationshipLabel>Agent Results</relationshipLabel>
+    <relationshipName>Agent_Results</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

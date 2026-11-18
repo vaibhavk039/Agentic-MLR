@@ -1,0 +1,65 @@
+================================================================================
+IMMUNO-BOOST™ (pembrolizumab-beta) 200mg/3mL
+Social Media Post — Twitter/X & LinkedIn — DRAFT
+Submitted for MLR Pre-Screening Review
+Asset Type: Digital/Social Media
+================================================================================
+
+--- DRAFT POST 1 (Twitter/X — 280 characters) ---
+
+New data on IMMUNO-BOOST in PD-L1+ NSCLC: median OS 26.3 months vs 13.4 months
+with chemo. HR 0.56. Approved for 1L PD-L1 TPS ≥50%. Important Safety Info &
+Prescribing Info: [ISI LINK] #Oncology #NSCLC
+
+Character count: 278 ✓
+
+--- DRAFT POST 2 (LinkedIn — Long form) ---
+
+Advancing the Standard of Care in Non-Small Cell Lung Cancer
+
+Data from the KEYNOTE-PRO trial continue to demonstrate the survival benefit of
+IMMUNO-BOOST (pembrolizumab-beta) in patients with previously untreated mNSCLC
+whose tumors express PD-L1 (TPS ≥50%) with no EGFR/ALK alterations.
+
+Key Data Highlights:
+▶ Median OS: 26.3 months with IMMUNO-BOOST vs 13.4 months with chemotherapy
+▶ 5-year OS rate: 31.9% vs 16.3%
+▶ Durable responses: median DOR 38.9 months
+▶ ORR: 44.7% vs 27.9%
+
+IMMUNO-BOOST is indicated as single-agent therapy for adult patients with
+unresectable or metastatic NSCLC with PD-L1 expression TPS ≥50% (as determined
+by an FDA-approved test), with no EGFR or ALK genomic tumor aberrations, as
+first-line treatment.
+
+⚠ IMPORTANT SAFETY INFORMATION
+IMMUNO-BOOST can cause severe and fatal immune-mediated adverse reactions
+including pneumonitis, colitis, hepatitis, endocrinopathies, nephritis,
+exfoliative dermatitis, myocarditis, and solid organ transplant rejection.
+
+Monitor for signs and symptoms of immune-mediated adverse reactions. Withhold
+or permanently discontinue IMMUNO-BOOST based on reaction severity.
+
+See full Prescribing Information, including Boxed Warning, at [ISI LINK]
+
+© 2024 PharmaCorp USA LLC. All rights reserved. For healthcare professionals only.
+PP-IMB-US-12345 | Expires: December 2025
+
+================================================================================
+REGULATORY STATUS
+  FDA Approval: First-line NSCLC PD-L1 ≥50%: September 2018
+  Supplemental approvals for multiple tumor types
+
+REFERENCES
+1. Mok TSK et al. KEYNOTE-PRO: 5-year follow-up of first-line pembrolizumab-beta
+   vs platinum-based chemotherapy in PD-L1-positive NSCLC.
+   J Clin Oncol. 2024;42:1234-1246.
+2. IMMUNO-BOOST Prescribing Information. PharmaCorp USA LLC. 2024.
+================================================================================
+REVIEWER NOTES (FOR INTERNAL USE ONLY — NOT FOR DISTRIBUTION):
+  - Confirm ORR and OS data match current PI and approved label claims
+  - ISI link placeholder must be replaced before activation
+  - Social post #1 must include "Important Safety Information" language per policy
+  - Confirm character count with emojis on all platforms
+  - LinkedIn post to include approved fair balance
+================================================================================

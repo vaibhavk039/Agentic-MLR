@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>67.0</apiVersion>
+    <description>Re-runs the AI pre-screening agents (Medical, Legal, Regulatory) on an existing MLR Submission.</description>
+    <interviewLabel>MLR Re-Run AI Review {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>MLR Re-Run AI Review</label>
+    <processType>Flow</processType>
+    <runInMode>DefaultMode</runInMode>
+    <actionCalls>
+        <name>Invoke_Orchestration</name>
+        <actionName>MLROrchestrationService</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Success_Screen</targetReference>
+        </connector>
+        <inputParameters>
+            <name>submissionIds</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputParameters>
+        <label>Invoke MLR Orchestration Service</label>
+        <locationX>176</locationX>
+        <locationY>518</locationY>
+    </actionCalls>
+    <recordUpdates>
+        <name>Reset_Agent_Results</name>
+        <label>Reset Agent Results to Pending</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <connector>
+            <targetReference>Reset_Submission</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>MLR_Submission__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Processing_Status__c</field>
+            <value>
+                <stringValue>Pending</stringValue>
+            </value>
+        </inputAssignments>
+        <object>MLR_Agent_Result__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Reset_Submission</name>
+        <label>Reset Submission Status</label>
+        <locationX>176</locationX>
+        <locationY>398</locationY>
+        <connector>
+            <targetReference>Invoke_Orchestration</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Agent_Run_Status__c</field>
+            <value>
+                <stringValue>Pending</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Draft</stringValue>
+            </value>
+        </inputAssignments>
+        <object>MLR_Submission__c</object>
+    </recordUpdates>
+    <screens>
+        <name>Confirm_Screen</name>
+        <label>Confirm AI Review</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Reset_Agent_Results</targetReference>
+        </connector>
+        <fields>
+            <name>ConfirmText</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Re-Run AI Pre-Screening?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;This will re-run all three AI agents (Medical, Legal, Regulatory) on this submission. Current results will be overwritten.&lt;/p&gt;&lt;p&gt;Click &lt;strong&gt;Next&lt;/strong&gt; to continue.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Success_Screen</name>
+        <label>AI Review Launched</label>
+        <locationX>176</locationX>
+        <locationY>638</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>SuccessText</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;AI Review is Running&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;The Medical, Legal, and Regulatory agents are now analyzing this submission. Results will appear on the record page within 10-15 seconds. Refresh the page to see the updated results.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Confirm_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

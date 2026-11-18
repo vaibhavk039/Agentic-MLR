@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>MLR Pre-Screener</label>
+    <logPrivateConversationData>false</logPrivateConversationData>
+    <richContentEnabled>false</richContentEnabled>
+    <type>Bot</type>
+    <botVersions>
+        <fullName>v1</fullName>
+    </botVersions>
+</Bot>

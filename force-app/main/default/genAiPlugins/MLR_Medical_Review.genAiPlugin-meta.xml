@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>MLR_Medical_Review</developerName>
+    <masterLabel>MLR Medical Review</masterLabel>
+    <description>Handles requests to assess the medical accuracy and fair balance of MLR submission documents.</description>
+    <language>en_US</language>
+    <pluginType>Topic</pluginType>
+    <scope>Handle requests to pre-screen an MLR submission for medical accuracy, fair balance, clinical claim substantiation, and ICMJE reporting standards. Use this topic when the user asks about medical review, medical accuracy, clinical data, fair balance, or wants to run a medical pre-screen on a submission. Do not handle approvals, rejections, or legal and regulatory questions — those are separate topics.</scope>
+    <genAiFunctions>
+        <functionName>Run_MLR_PreScreen</functionName>
+    </genAiFunctions>
+</GenAiPlugin>

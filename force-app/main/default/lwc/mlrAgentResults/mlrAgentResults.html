@@ -1,0 +1,80 @@
+<template>
+    <lightning-card title="AI Agent Review Results" icon-name="utility:einstein">
+        <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+
+            <template if:true={isLoading}>
+                <div class="loading-state">
+                    <lightning-spinner alternative-text="Loading results..." size="small"></lightning-spinner>
+                    <p class="slds-text-color_weak slds-m-top_small">Loading AI review results...</p>
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+                <template if:true={hasResults}>
+                    <div class="agent-grid">
+                        <template for:each={agentResults} for:item="result">
+                            <div key={result.Id} class={result.cardClass}>
+                                <!-- Header -->
+                                <div class={result.headerClass}>
+                                    <lightning-icon icon-name={result.iconName} size="small" class="slds-m-right_x-small" alternative-text={result.Agent_Type__c}></lightning-icon>
+                                    <span class="agent-type-label">{result.Agent_Type__c}</span>
+                                    <template if:true={result.Confidence__c}>
+                                        <span class={result.confidencePillClass}>{result.Confidence__c}</span>
+                                    </template>
+                                </div>
+
+                                <!-- Status -->
+                                <div class="agent-status">
+                                    <span class={result.statusClass}>{result.Processing_Status__c}</span>
+                                </div>
+
+                                <!-- Rationale -->
+                                <template if:true={result.Rationale__c}>
+                                    <div class="agent-section">
+                                        <p class="section-label">Analysis</p>
+                                        <p class="section-body">{result.Rationale__c}</p>
+                                    </div>
+                                </template>
+
+                                <!-- Flags -->
+                                <template if:true={result.Flags__c}>
+                                    <div class="flags-block">
+                                        <p class="section-label">
+                                            <lightning-icon icon-name="utility:warning" size="xx-small" class="slds-m-right_xx-small"></lightning-icon>
+                                            Flags
+                                        </p>
+                                        <p class="section-body">{result.Flags__c}</p>
+                                    </div>
+                                </template>
+
+                                <!-- Footer -->
+                                <template if:true={result.showGrounding}>
+                                    <div class="agent-footer">
+                                        <div class="grounding-bar-container">
+                                            <div class="grounding-bar" style={result.groundingBarStyle}></div>
+                                        </div>
+                                        <div class="footer-meta">
+                                            <span>Grounding: {result.groundingPct}%</span>
+                                            <template if:true={result.Cited_Source__c}>
+                                                <span class="cited-source">{result.Cited_Source__c}</span>
+                                            </template>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+
+                <template if:false={hasResults}>
+                    <div class="no-results">
+                        <lightning-icon icon-name="utility:einstein" size="large" class="no-results-icon"></lightning-icon>
+                        <p class="slds-text-heading_small slds-m-top_small">No AI Review Results Yet</p>
+                        <p class="slds-text-color_weak slds-m-top_xx-small">Use the "Re-Run AI Review" action button above to generate Medical, Legal, and Regulatory pre-screening results.</p>
+                    </div>
+                </template>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

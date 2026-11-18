@@ -1,0 +1,9 @@
+{
+  "packageDirectories": [
+    { "path": "force-app", "default": true }
+  ],
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "67.0",
+  "oauthLocalPort": "1717"
+}

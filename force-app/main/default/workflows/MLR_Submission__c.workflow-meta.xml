@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Set_Medical_Approved_Date</fullName>
+        <field>Medical_Approved_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Medical Approved Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Stage_To_Legal</fullName>
+        <field>Current_Stage__c</field>
+        <literalValue>Legal</literalValue>
+        <name>Set Stage To Legal</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Rejected_Medical</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Set Status Rejected Medical</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Current_Stage</fullName>
+        <field>Current_Stage__c</field>
+        <name>Clear Current Stage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Legal_Approved_Date</fullName>
+        <field>Legal_Approved_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Legal Approved Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Stage_To_Regulatory</fullName>
+        <field>Current_Stage__c</field>
+        <literalValue>Regulatory</literalValue>
+        <name>Set Stage To Regulatory</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Rejected_Legal</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Set Status Rejected Legal</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Regulatory_Approved_Date</fullName>
+        <field>Regulatory_Approved_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Set Regulatory Approved Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Approved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Set Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Stage_To_Complete</fullName>
+        <field>Current_Stage__c</field>
+        <literalValue>Complete</literalValue>
+        <name>Set Stage To Complete</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Status_Rejected_Regulatory</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Set Status Rejected Regulatory</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Increment_Resubmission_Count</fullName>
+        <field>Resubmission_Count__c</field>
+        <formula>Resubmission_Count__c + 1</formula>
+        <name>Increment Resubmission Count</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>
